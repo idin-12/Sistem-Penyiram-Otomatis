@@ -1,10 +1,4 @@
 import streamlit as st
-import numpy as np
-import sympy as sp
-import matplotlib.pyplot as plt
-import plotly.graph_objs as go
-from scipy.optimize import linprog
-from pulp import LpProblem, LpVariable, LpMaximize, value
 
 # =========================
 # 🎨 Konfigurasi halaman

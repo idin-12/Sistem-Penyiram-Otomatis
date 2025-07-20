@@ -39,8 +39,9 @@ h3 {
 
 # =========================
 # 💧 Judul Aplikasi
-st.markdown("# 💧 Sistem Penyiram Otomatis")
+st.markdown("# 💧 Sistem Penyiram Otomatis 💧")
 st.markdown("### Smart Sprinkler System Controller")
+st.markdown("#### Muhyiddin As Syarif (312410122")
 
 st.write("---")
 

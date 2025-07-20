@@ -49,10 +49,24 @@ h4 {
 
 # =========================
 # 💧 Judul Aplikasi
-st.markdown("### 💧 Smart Sprinkler System Controller 💧")
-st.markdown("#### 👤 Muhyiddin As Syarif (312410122)")
+st.markdown("# 💧 Sistem Penyiram Otomatis")
+st.markdown("### Smart Sprinkler System Controller")
+
+# =========================
+# 👤 Nama pengguna di tengah
+st.markdown("<h4>👤 Muhyiddin As Syarif (312410122)</h4>", unsafe_allow_html=True)
 
 st.write("---")
+
+# =========================
+# ✨ Deskripsi Program
+st.markdown("""
+Program ini mengatur apakah sprinkler harus **MENYALA (ON)** atau **MATI (OFF)** berdasarkan tiga kondisi utama:
+
+- 🌱 **Tanah kering**
+- 🌧️ **Tidak sedang hujan**
+- 🖐️ **Manual override aktif**
+""")
 
 # =========================
 # ✅ Input kondisi user dengan layout yang bersih

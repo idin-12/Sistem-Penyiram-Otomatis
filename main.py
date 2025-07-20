@@ -1,5 +1,6 @@
-# Sistem Penyiram Otomatis (Sprinkler System)
-# Author: [Nama Kamu]
+# Sistem Penyiram Otomatis 
+# (Sprinkler System)
+# Author: [Muhyiddin As Syarif]
 # Description:
 # Aplikasi Streamlit dengan desain UI menarik untuk menentukan status sprinkler.
 

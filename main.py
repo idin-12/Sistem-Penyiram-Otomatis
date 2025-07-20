@@ -1,9 +1,3 @@
-# Sistem Penyiram Otomatis 
-# (Sprinkler System)
-# Author: [Muhyiddin As Syarif]
-# Description:
-# Aplikasi Streamlit dengan desain UI menarik untuk menentukan status sprinkler.
-
 import streamlit as st
 
 # =========================
@@ -13,7 +7,7 @@ st.set_page_config(page_title="Sprinkler System", page_icon="💧", layout="cent
 # =========================
 # 💧 Judul dan deskripsi
 st.markdown("""
-# 💧 Sistem Penyiram Otomatis (Sprinkler System)
+# 💧 Sistem Penyiram Otomatis (Sprinkler System) By Muhyiddin As Syarif (312410122)
 
 Program ini mengatur apakah sprinkler harus **menyala (ON)** atau **mati (OFF)** berdasarkan tiga kondisi utama:
 """)

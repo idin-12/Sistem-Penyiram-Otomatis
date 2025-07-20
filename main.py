@@ -8,6 +8,10 @@ st.set_page_config(
     layout="centered"
 )
 
+st.write("---")
+
+# =========================
+
 # =========================
 # 💠 Custom CSS untuk mempercantik tampilan
 st.markdown("""

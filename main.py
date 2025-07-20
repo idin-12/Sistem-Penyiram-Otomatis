@@ -1,4 +1,10 @@
 import streamlit as st
+import numpy as np
+import sympy as sp
+import matplotlib.pyplot as plt
+import plotly.graph_objs as go
+from scipy.optimize import linprog
+from pulp import LpProblem, LpVariable, LpMaximize, value
 
 # =========================
 # 🎨 Konfigurasi halaman
@@ -7,19 +13,6 @@ st.set_page_config(
     page_icon="💧",
     layout="centered"
 )
-
-st.write("---")
-# =========================
-
-# ✨ Deskripsi Program
-st.markdown("""
-Program ini mengatur apakah sprinkler harus **MENYALA (ON)** atau **MATI (OFF)** berdasarkan tiga kondisi utama:
-
-- 🌱 **Tanah kering**
-- 🌧️ **Tidak sedang hujan**
-- 🖐️ **Manual override aktif**
-
-""")
 
 # =========================
 # 💠 Custom CSS untuk mempercantik tampilan
@@ -52,8 +45,21 @@ h3 {
 
 # =========================
 # 💧 Judul Aplikasi
-st.markdown("### 💧 Smart Sprinkler System Controller 💧")
-st.markdown("### Muhyiddin As Syarif (312410122)")
+st.markdown("# 💧 Sistem Penyiram Otomatis")
+st.markdown("### Smart Sprinkler System Controller")
+st.markdown("#### 👤 Muhyiddin As Syarif (312410122)")
+
+st.write("---")
+
+# =========================
+# ✨ Deskripsi Program
+st.markdown("""
+Program ini mengatur apakah sprinkler harus **MENYALA (ON)** atau **MATI (OFF)** berdasarkan tiga kondisi utama:
+
+- 🌱 **Tanah kering**
+- 🌧️ **Tidak sedang hujan**
+- 🖐️ **Manual override aktif**
+""")
 
 # =========================
 # ✅ Input kondisi user dengan layout yang bersih
@@ -101,12 +107,3 @@ with st.expander("📄 Penjelasan Logika Keputusan"):
 - Jika **Tanah kering** dan **tidak hujan**, sprinkler **ON**.
 - Selain itu, sprinkler **OFF**.
 """)
-
-# =========================
-# 📦 Import packages tambahan (placeholder agar requirements.txt valid)
-import numpy as np
-import sympy as sp
-import matplotlib.pyplot as plt
-import plotly.graph_objs as go
-from scipy.optimize import linprog
-from pulp import LpProblem, LpVariable, LpMaximize, value

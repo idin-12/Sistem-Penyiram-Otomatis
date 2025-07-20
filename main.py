@@ -79,6 +79,3 @@ import matplotlib.pyplot as plt
 import plotly.graph_objs as go
 from scipy.optimize import linprog
 from pulp import LpProblem, LpVariable, LpMaximize, value
-
-st.write("---")
-st.write("📦 **Packages Loaded:** numpy, sympy, matplotlib, plotly, scipy, pulp")

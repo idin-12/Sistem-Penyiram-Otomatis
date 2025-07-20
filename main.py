@@ -1,27 +1,68 @@
+# Sistem Penyiram Otomatis (Sprinkler System)
+# Author: [Nama Kamu]
+# Description:
+# Aplikasi Streamlit dengan desain UI elegan dan profesional.
+
 import streamlit as st
 
 # =========================
 # 🎨 Konfigurasi halaman
-st.set_page_config(page_title="Sprinkler System", page_icon="💧", layout="centered")
+st.set_page_config(
+    page_title="💧 Sprinkler System Control",
+    page_icon="💧",
+    layout="centered"
+)
 
 # =========================
-# 💧 Judul dan deskripsi
+# 💠 Custom CSS untuk mempercantik tampilan
 st.markdown("""
-# 💧 Sistem Penyiram Otomatis (Sprinkler System) By Muhyiddin As Syarif (312410122)
+<style>
+h1 {
+    text-align: center;
+    color: #2E86C1;
+}
+h3 {
+    text-align: center;
+}
+.status-box {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.green-box {
+    background-color: #D4EFDF;
+    color: #27AE60;
+}
+.red-box {
+    background-color: #FADBD8;
+    color: #C0392B;
+}
+</style>
+""", unsafe_allow_html=True)
 
-Program ini mengatur apakah sprinkler harus **menyala (ON)** atau **mati (OFF)** berdasarkan tiga kondisi utama:
-""")
-
-st.markdown("""
-1. 🌱 **Tanah kering**
-2. 🌧️ **Tidak sedang hujan**
-3. 🖐️ **Manual override aktif**
-""")
+# =========================
+# 💧 Judul Aplikasi
+st.markdown("# 💧 Sistem Penyiram Otomatis")
+st.markdown("### Smart Sprinkler System Controller")
 
 st.write("---")
 
 # =========================
-# ✅ Input kondisi user (dengan kolom layout)
+# ✨ Deskripsi Program
+st.markdown("""
+Program ini mengatur apakah sprinkler harus **MENYALA (ON)** atau **MATI (OFF)** berdasarkan tiga kondisi utama:
+
+- 🌱 **Tanah kering**
+- 🌧️ **Tidak sedang hujan**
+- 🖐️ **Manual override aktif**
+
+""")
+
+# =========================
+# ✅ Input kondisi user dengan layout yang bersih
+st.write("### 🔧 Masukkan Kondisi Saat Ini:")
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -39,27 +80,27 @@ st.write("---")
 # 🔧 Fungsi kontrol sprinkler
 def sprinkler_control(is_dry, is_raining, manual_override):
     if manual_override:
-        return "Sprinkler ON", "✅", "green"
+        return "Sprinkler ON", "✅", "green-box"
     elif is_dry and not is_raining:
-        return "Sprinkler ON", "✅", "green"
+        return "Sprinkler ON", "✅", "green-box"
     else:
-        return "Sprinkler OFF", "❌", "red"
+        return "Sprinkler OFF", "❌", "red-box"
 
 # =========================
 # 🚿 Hitung status sprinkler
-status, icon, color = sprinkler_control(is_dry, is_raining, manual_override)
+status, icon, box_class = sprinkler_control(is_dry, is_raining, manual_override)
 
 # =========================
-# 🎯 Tampilkan hasil dengan desain
+# 🎯 Tampilkan hasil dengan desain box warna
 st.markdown(f"""
-## 🚿 Status Sprinkler:
-
-<span style="font-size:30px; color:{color};">{icon} {status}</span>
+<div class="status-box {box_class}">
+{icon} {status}
+</div>
 """, unsafe_allow_html=True)
 
 # =========================
 # 🔍 Penjelasan logika (expander)
-with st.expander("📄 Lihat Logika Keputusan"):
+with st.expander("📄 Penjelasan Logika Keputusan"):
     st.markdown("""
 - Jika **Manual Override aktif**, maka sprinkler akan selalu **ON**.
 - Jika **Tanah kering** dan **tidak hujan**, sprinkler **ON**.
@@ -74,3 +115,6 @@ import matplotlib.pyplot as plt
 import plotly.graph_objs as go
 from scipy.optimize import linprog
 from pulp import LpProblem, LpVariable, LpMaximize, value
+
+st.write("---")
+st.write("📦 **Packages Loaded:** numpy, sympy, matplotlib, plotly, scipy, pulp")

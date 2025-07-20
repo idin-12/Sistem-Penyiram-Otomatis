@@ -42,19 +42,6 @@ h3 {
 st.markdown("### 💧 Smart Sprinkler System Controller 💧")
 st.markdown("### Muhyiddin As Syarif (312410122)")
 
-st.write("---")
-
-# =========================
-# ✨ Deskripsi Program
-st.markdown("""
-Program ini mengatur apakah sprinkler harus **MENYALA (ON)** atau **MATI (OFF)** berdasarkan tiga kondisi utama:
-
-- 🌱 **Tanah kering**
-- 🌧️ **Tidak sedang hujan**
-- 🖐️ **Manual override aktif**
-
-""")
-
 # =========================
 # ✅ Input kondisi user dengan layout yang bersih
 st.write("### 🔧 Masukkan Kondisi Saat Ini:")

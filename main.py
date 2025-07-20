@@ -49,8 +49,8 @@ h4 {
 
 # =========================
 # 💧 Judul Aplikasi
-st.markdown("# 💧 Sistem Penyiram Otomatis")
-st.markdown("### Smart Sprinkler System Controller")
+st.markdown("### 💧 Smart Sprinkler System Controller 💧")
+st.markdown("")
 
 # =========================
 # 👤 Nama pengguna di tengah

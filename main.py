@@ -9,8 +9,17 @@ st.set_page_config(
 )
 
 st.write("---")
-
 # =========================
+
+# ✨ Deskripsi Program
+st.markdown("""
+Program ini mengatur apakah sprinkler harus **MENYALA (ON)** atau **MATI (OFF)** berdasarkan tiga kondisi utama:
+
+- 🌱 **Tanah kering**
+- 🌧️ **Tidak sedang hujan**
+- 🖐️ **Manual override aktif**
+
+""")
 
 # =========================
 # 💠 Custom CSS untuk mempercantik tampilan
